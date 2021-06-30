@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState, Component } from "react";
+
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
@@ -25,6 +26,7 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
+
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
