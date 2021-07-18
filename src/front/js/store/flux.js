@@ -18,11 +18,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//console.log(users.result);
 				setStore({ planet: object.results });
 			},
-			getPropperties: async proppertiesUrl => {
-				const data = await fetch(proppertiesUrl);
+			getPropperties: async id => {
+				const data = await fetch("https://www.swapi.tech/api/people/" + id);
 				const object = await data.json();
 				const variable = object.result;
-				setPropperties({ singleProperties: variable });
+				setStore({ singleProperties: variable });
 			}
 		}
 	};

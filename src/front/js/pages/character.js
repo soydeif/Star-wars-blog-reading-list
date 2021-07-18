@@ -11,12 +11,15 @@ export const Character = props => {
 
 	useEffect(() => {
 		actions.getPropperties(characterId);
-		console.log(store.singleProperties);
+		//console.log(store.character.properties);
+		actions.getData(props.url);
 	}, []);
 
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.singleProperties.description}</h1>
+			<h1 className="display-4">
+				{store.character} : {store.singleProperties.description}
+			</h1>
 			<img src={rigoImageUrl} />
 			<hr className="my-4" />
 		</div>
