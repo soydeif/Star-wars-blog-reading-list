@@ -2,7 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			character: [],
-			planet: []
+			planet: [],
+			singleProperties: []
 		},
 		actions: {
 			getData: async () => {
@@ -16,6 +17,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const object = await data.json();
 				//console.log(users.result);
 				setStore({ planet: object.results });
+			},
+			getPropperties: async proppertiesUrl => {
+				const data = await fetch(proppertiesUrl);
+				const object = await data.json();
+				const variable = object.result;
+				setPropperties({ singleProperties: variable });
 			}
 		}
 	};

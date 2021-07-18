@@ -1,11 +1,13 @@
 import React, { useEffect, useState, Component } from "react";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link, useParams } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
-import { Single } from "./pages/single";
+import { Character } from "./pages/character";
+import { Planet } from "./pages/planet";
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -30,11 +32,16 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
+
 						<Route>
 							<h1>Not found!</h1>
+						</Route>
+
+						<Route exact path="/character/:characterId">
+							<Character />
+						</Route>
+						<Route exact path="/planet/:planetId">
+							<Planet />
 						</Route>
 					</Switch>
 					<Footer />

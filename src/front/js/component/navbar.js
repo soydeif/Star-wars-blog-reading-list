@@ -12,8 +12,8 @@ export const Navbar = () => {
 				/>
 			</Link>
 			<Dropdown>
-				<Dropdown.Toggle variant="success" id="dropdown-basic">
-					Dropdown Button
+				<Dropdown.Toggle variant="primary" id="dropdown-basic">
+					Favorites
 				</Dropdown.Toggle>
 
 				<Dropdown.Menu>

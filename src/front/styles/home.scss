@@ -1,20 +1,18 @@
 #planetas,#caracteres{
-    width: 180em;
+    width: 100em;
+    margin: auto;
+}   
       
-} 
-.container{   
- 
- width: 180em;
- overflow: scroll;
- 
- 
- 
-
-}
 #hola{
-    display: inline-block;
+    display: inline-block;   
+    max-height: 330px;
 }
 
+.card-text{
+    width: 100px;
+    height: 110px;
+   
+}
 
 h1{
     color: red;
