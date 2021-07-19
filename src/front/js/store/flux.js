@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			character: [],
 			planet: [],
-			singleProperties: []
+			singleProperties: {}
 		},
 		actions: {
 			getData: async () => {

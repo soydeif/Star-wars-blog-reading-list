@@ -12,13 +12,28 @@ export const Character = props => {
 	useEffect(() => {
 		actions.getPropperties(characterId);
 		//console.log(store.character.properties);
-		actions.getData(props.url);
+
+		//console.log(store.character.properties.name);
 	}, []);
 
+	/*const mapeo = obj => {
+		let firstPart = Object.entries(obj)
+			.slice(0, Object.entries(obj).length / 2)
+			.map(property => {
+				return (
+					<li key={property[0]} className="col-12 text-Dark  list-unstyled">
+						{property[0]} : {property[1]}
+					</li>
+				);
+			});
+		return <ul className=" col-6">{firstPart}</ul>;
+	};
+*/
 	return (
 		<div className="jumbotron">
 			<h1 className="display-4">
-				{store.character} : {store.singleProperties.description}
+				{store.singleProperties ? store.singleProperties.properties.name : " "} -
+				{store.singleProperties ? store.singleProperties.description : " "}
 			</h1>
 			<img src={rigoImageUrl} />
 			<hr className="my-4" />

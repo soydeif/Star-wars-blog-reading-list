@@ -20,7 +20,7 @@ const injectContext = PassedComponent => {
 					})
 			})
 		);
-
+		/// REVISAR LLAMADAS A LA API Y REDUCIR LLAMADAS  //
 		useEffect(() => {
 			state.actions.getData();
 			state.actions.getData2();
