@@ -1,16 +1,31 @@
 #planetas,#caracteres{
     width: 100em;
-    margin: auto;
+    display: inline-block;
+    
+    text-align: left;
+    overflow: hidden;
+   
 }   
-      
+
 #hola{
     display: inline-block;   
-    max-height: 330px;
+    
+    
 }
 
+
+.delete:hover {
+  color: red;
+}
+
+
 .card-text{
-    width: 100px;
+    width: 200px;
     height: 110px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 15px;
+    
    
 }
 
@@ -23,14 +38,42 @@ h1{
 body{
     padding-left: 2%;
     padding-right: 2%;
+    
 }
 
 i{
     color: gray;
     outline-color: black;
+    margin: right;
+    
+    
 }
 
 i:hover {
   color: red;
+}
+
+i::selection{
+    color:blue
+
+}
+
+img{
+    width: 30%;
+    height: 30%;   
+   
+}
+
+.btn{
+    float: flex;
+}
+
+
+#card-footer{
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+    background-color: lightskyblue;
+    border-radius: 15px;
 }
 
