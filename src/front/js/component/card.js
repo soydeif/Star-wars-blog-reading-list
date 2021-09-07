@@ -47,10 +47,7 @@ export const Card = props => {
 
 									<p
 										onClick={() => {
-											if (
-												store.favorites ==
-												!store.favorites.includes(propperties.properties.name)
-											) {
+											if (!store.favorites.includes(propperties.properties.name)) {
 												actions.addFavorites(propperties.properties.name);
 											}
 										}}
@@ -77,10 +74,7 @@ export const Card = props => {
 
 									<p
 										onClick={() => {
-											if (
-												store.favorites ==
-												!store.favorites.includes(propperties.properties.name)
-											) {
+											if (!store.favorites.includes(propperties.properties.name)) {
 												actions.addFavorites(propperties.properties.name);
 											}
 										}}
